@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html{
+  box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body{
+    background: linear-gradient(to right, #c3dafe, #ffffff);
+font-family: Arial, sans-serif;
+
+}
+
+.bounce-infinite {
+    animation: bounceY 1s infinite ease-in-out;
+  }
+  
+  @keyframes bounceY {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes moveFromTop {
+    0% {
+      transform: translateY(-100px); /* Start from 100px above */
+       /* Start as invisible */
+    }
+    100% {
+      transform: translateY(0); /* End at the original position */
+       /* Fully visible */
+    }
+  }
+  
+  /* Apply the animation to the element */
+  .move-from-top {
+    animation: moveFromTop 0.5s ease-in-out forwards; /* Smooth move with opacity transition */
+  }
+
+  .rotate-animation {
+    animation: rotate 2s ease-in-out forwards;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg); /* Start at original position */
+    }
+    25% {
+      transform: rotate(-45deg); /* Rotate 45 degrees to the left */
+    }
+    75% {
+      transform: rotate(45deg); /* Rotate back 90 degrees to the right (45 + 90 = 135) */
+    }
+    100% {
+      transform: rotate(45deg); /* End at the final 45-degree right rotation */
+    }
+  }
+  
