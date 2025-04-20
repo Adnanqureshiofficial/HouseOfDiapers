@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const FeaturedProduct = ({ image, title, price, offerPrice }) => {
     return (
 
@@ -12,9 +14,9 @@ const FeaturedProduct = ({ image, title, price, offerPrice }) => {
             <h5 className="text-lg font-semibold mb-2">{title}</h5>
             <p className="text-gray-600 mb-2 line-through">MRP ₹{price}</p>
             <p className="text-green-600 font-semibold mb-4">Offer Price ₹{offerPrice}</p>
-            <button className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-              Buy Now
-            </button>
+            <Link  to={'/shop'} className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+              View More
+            </Link>
           </div>
         </div>
       </div>

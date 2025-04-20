@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const HeroSection = () => {
@@ -14,12 +15,12 @@ const HeroSection = () => {
         <p className="text-lg md:text-xl mb-6">
           Your one-stop destination for all your diapering needs.
         </p>
-        <a
-          to="/shop"
+        <Link
+          to={"/shop"}
           className="bg-green-500 bounce-infinite hover:bg-green-600 pointer-events-auto cursor-pointer text-white font-semibold py-3 px-6 rounded-lg transition duration-300"
         >
           Shop Now
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -30,7 +30,7 @@ const Footer = () => {
             {/* <!-- Social Media Links Section --> */}
             <div className="text-center md:text-left ">
                 <h5 className="text-xl font-semibold md:mb-4 mb-2 text-indigo-500">Follow Us</h5>
-                <a href="#" className="text-gray-700 hover:text-[#1D4ED8] flex gap-1 items-center md:justify-start justify-center  mr-3"><FaInstagram />
+                <a href="https://www.instagram.com/house_of_daipers/" className="text-gray-700 hover:text-[#1D4ED8] flex gap-1 items-center md:justify-start justify-center  mr-3"><FaInstagram />
                 Instagram</a>
                 {/* <!-- Add other social media links as needed --> */}
             </div>

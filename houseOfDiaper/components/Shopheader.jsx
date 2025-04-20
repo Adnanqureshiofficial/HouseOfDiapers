@@ -28,7 +28,7 @@ const Shopheader = () => {
           
           <Link to="/login" className="block text-gray-800 flex items-center gap-1 hover:text-blue-500"><IoIosLogIn />Login</Link>
           <Link to="/cart" className="block text-gray-800 flex items-center gap-1 hover:text-blue-500"><FaOpencart />Cart</Link>
-          <Link to="/account" className="block text-gray-800 flex items-center gap-1 hover:text-blue-500"><VscAccount />
+          <Link to="/accountpage" className="block text-gray-800 flex items-center gap-1 hover:text-blue-500"><VscAccount />
           Account</Link>
           </div>
 
@@ -71,7 +71,7 @@ const Shopheader = () => {
           <Link to="/" className="block text-gray-800 flex items-center gap-1 hover:bg-gray-500/30 rounded:sm  py-1 px-2  hover:text-blue-500"><IoHomeOutline />Home</Link>
           <Link to="/cart" className="block text-gray-800 flex items-center gap-1 hover:bg-gray-500/30 rounded:sm  py-1 px-2  hover:text-blue-500"><FaOpencart />Cart</Link>
           <Link to="/login" className="block text-gray-800 flex items-center gap-1 hover:bg-gray-500/30 rounded:sm  py-1 px-2  hover:text-blue-500"><IoIosLogIn />Login</Link>
-          <Link to="/account" className="block text-gray-800 flex items-center gap-1 hover:bg-gray-500/30 rounded:sm  py-1 px-2  hover:text-blue-500"><FaOpencart />
+          <Link to="/accountpage" className="block text-gray-800 flex items-center gap-1 hover:bg-gray-500/30 rounded:sm  py-1 px-2  hover:text-blue-500"><FaOpencart />
           Account</Link>
         </div>
       </div>

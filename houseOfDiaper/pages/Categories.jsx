@@ -43,9 +43,9 @@ const categories = [
     <p className="text-lg mb-6 max-w-2xl mx-auto">
       Discover the best options for your needs, whether you're looking for baby diapers, adult diapers, or clearance products.
     </p>
-    <a href="#categories" class="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-indigo-700 transition-all duration-300">
+    <Link to={'/shop'} class="bg-indigo-600 text-white py-2 px-6 rounded-full text-xl font-semibold hover:bg-indigo-700 transition-all duration-300">
       Shop Now
-    </a>
+    </Link>
   </div>
 </section>
 
@@ -67,7 +67,7 @@ const categories = [
         <p className="text-lg text-gray-700 mb-6">
           Our baby diapers provide ultimate comfort and leak protection, ensuring your baby stays dry and happy all day.
         </p>
-        <a href="/baby-diapers" className="text-indigo-600 font-bold hover:underline">Explore Baby Diapers</a>
+        <Link to={'/shop'} className="text-indigo-600 font-bold hover:underline">Explore Baby Diapers</Link>
       </div>
 
       {/* <!-- Category 2: Adult Diapers --> */}
@@ -79,7 +79,7 @@ const categories = [
         <p className="text-lg text-gray-700 mb-6">
           Designed for adults, our diapers provide comfort and dignity, offering reliable protection for those in need.
         </p>
-        <a href="/adult-diapers" className="text-indigo-600 font-bold hover:underline">Explore Adult Diapers</a>
+        <Link to={'/shop'} className="text-indigo-600 font-bold hover:underline">Explore Adult Diapers</Link>
       </div>
 
       {/* <!-- Category 3: Old Products --> */}
@@ -87,11 +87,11 @@ const categories = [
         <div className="mb-6">
           <img src="/images/heroimgbp.jpg" alt="Old Products" className="w-full h-64 object-cover rounded-md mb-4" />
         </div>
-        <h3 className="text-3xl font-semibold text-indigo-700 mb-4">Old Products</h3>
+        <h3 className="text-3xl font-semibold text-indigo-700 mb-4">Other Products</h3>
         <p className="text-lg text-gray-700 mb-6">
           Discover our range of discontinued or clearance diapers at affordable prices. Great deals, limited stock!
         </p>
-        <a href="/old-products" className="text-indigo-600 font-bold hover:underline">Explore Old Products</a>
+        <Link to={'/shop'} className="text-indigo-600 font-bold hover:underline">Explore Other Products</Link>
       </div>
       
     </div>

@@ -17,7 +17,8 @@ app.use(express.json());
 
 // CORS configuration 
 const allowedOrigins = [
-  'http://localhost:5173'   // frontend
+  'http://localhost:5173',
+  'http://localhost:5174' ,  // frontend
 
 ];
 
@@ -29,11 +30,13 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 };
 
+// Serve static files from the 'uploads' folder
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 //configuring session
 app.use(session({
@@ -51,15 +54,6 @@ app.use(session({
 // Use CORS middleware with the options
 app.use(cors(corsOptions));
 
-//Routing middleware
-app.use('/auth', authRoutes);
-app.use('/products', productRoutes);
-app.use('/cart', cartRoute);
-app.use('/orders', orderRoute);
-
-
-// Declare your generic routes after your specific routes
-app.use('/', indexRouter);
 
 
 
@@ -75,7 +69,17 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
+//Routing middleware
+app.use('/auth', authRoutes);
+app.use('/products', productRoutes);
+app.use('/cart', cartRoute);
+app.use('/orders', orderRoute);
+
+
+// Declare your generic routes after your specific routes
 app.use('/', indexRouter);
+
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

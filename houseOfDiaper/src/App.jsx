@@ -10,6 +10,8 @@ import Shop from '../pages/Shop'
 import { CartProvider } from '../components/CartContext'
 import { Toaster } from 'react-hot-toast'
 import CartPage from '../components/CartPage'
+import AccountPage from '../pages/AccountPage'
+import CheckoutPage from '../pages/CheckoutPage'
 
 function App() {
   
@@ -45,7 +47,7 @@ function App() {
   
   return (
     <>
-<CartProvider>
+<CartProvider isLogged={isLoggedIn}>
 <Toaster
         position="bottom-center"
         toastOptions={{
@@ -69,6 +71,8 @@ function App() {
 <Route path='/login' element={<Login setUser = {setUser}/>} />
 <Route path='/shop' element={<Shop  isLoggedIn={isLoggedIn}  toggleDisplayPrompt  = {toggleDisplayPrompt} displayLoginPrompt = {displayLoginPrompt} />} />
 <Route path="/cart" element={<CartPage/>}/>
+<Route path="/accountpage" element={<AccountPage/>}/>
+<Route path="/checkout" element={<CheckoutPage/>}/>
 
 </Routes>
 </CartProvider>

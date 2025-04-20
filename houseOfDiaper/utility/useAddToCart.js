@@ -6,21 +6,24 @@ const useAddToCart = () => {
   const { cart, dispatch } = useCart();
 
   const handleAddToCart = (product) => {
-    const alreadyInCart = cart.find(item => item.id === product.id);
-
+    const alreadyInCart = cart.find(item => item.item_id === product.id);
+console.log(product)
     if (alreadyInCart) {
-      toast.success(`${product.title} is already in your cart`);
+      toast.success(`${product.product_name} is already in your cart`);
     } else {
       dispatch({
         type: "AddItems",
         payload: {
-          id: product.id,
-          title: product.title,
+          item_id: product.id,             // match item_id in fetched cart items
+          name: product.product_name,      // match 'name'
           price: product.price,
+          size: product.size || "",        // optional if you're supporting it
           image: product.image,
-        },
+          quantity: 0,
+        }
       });
-      toast.success(`${product.title} added to cart`);
+      
+      toast.success(`${product.product_name} added to cart`);
     }
   };
 
